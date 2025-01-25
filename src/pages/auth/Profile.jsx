@@ -16,8 +16,8 @@ export const Profile = () => {
     <>
       <Navbar />
 
-      <div className="bg-white mx-auto max-w-7xl">
-        <form className="w-[60%] mx-auto flex flex-col justify-center items-center pt-20 pb-10 gap-6">
+      <div className="bg-white w-full">
+        <form className="w-[60%] max-w-7xl mx-auto flex flex-col justify-center items-center pt-20 pb-10 gap-6">
           <div className="w-36 h-3w-36 relative mx-auto">
             <img src={ProfilePhoto} alt="Profile Photo" loading="lazy" className=" rounded-full object-cover w-full h-full mx-auto" />
             <div className="bg-white right-0 border-2 border-slate-300 p-2 bottom-1 absolute rounded-full">
