@@ -19,7 +19,7 @@ export const Transaction = () => {
         <div className="mx-auto flex w-[90%] max-w-7xl flex-col gap-6 pb-10 pt-20">
           <SaldoCard />
 
-          <div className="flex w-full flex-col">
+          <div className="mt-6 flex w-full flex-col">
             <p className="text-base text-slate-500">PemBayaran</p>
             <div className="flex items-center gap-2">
               <img
@@ -37,16 +37,13 @@ export const Transaction = () => {
                 <MdMoney size={18} className="text-slate-700" />
                 <input
                   type="number"
-                  name="username"
-                  placeholder="masukkan nominal"
+                  name="topUpAmount"
+                  placeholder="masukkan nominal pembayaran"
                   className="w-full px-1 text-sm outline-none"
                 />
               </div>
-              <button className="textsm w-full rounded-md border-2 border-white bg-orange-600 py-3 text-white hover:bg-red-600">
+              <button className="w-full rounded-md border-2 border-white bg-orange-600 py-3 text-sm text-white hover:bg-red-600">
                 Bayar
-              </button>
-              <button className="w-full rounded-md border-2 border-orange-600 bg-white py-3 text-sm text-orange-600 hover:bg-orange-600 hover:text-white">
-                Kembali
               </button>
             </div>
           </div>
