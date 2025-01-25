@@ -2,8 +2,9 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // Pages
-import { Login } from "../pages/Login";
-import { Registration } from "../pages/Registration";
+import { Login } from "../pages/auth/Login";
+import { Registration } from "../pages/auth/Registration";
+import { Profile } from "../pages/auth/Profile";
 
 export const RouteList = () => {
   return (
@@ -12,6 +13,7 @@ export const RouteList = () => {
         {/* Auth */}
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   );
