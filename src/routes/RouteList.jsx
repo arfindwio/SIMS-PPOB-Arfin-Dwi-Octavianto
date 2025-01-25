@@ -7,6 +7,7 @@ import { Login } from "../pages/auth/Login";
 import { Registration } from "../pages/auth/Registration";
 import { Profile } from "../pages/profile/Profile";
 import { Transaction } from "../pages/transaction/Transaction";
+import { TopUp } from "../pages/topup/TopUp";
 
 export const RouteList = () => {
   return (
@@ -23,6 +24,9 @@ export const RouteList = () => {
 
         {/* Transaction */}
         <Route path="/transaction" element={<Transaction />} />
+
+        {/* Topup */}
+        <Route path="/top-up" element={<TopUp />} />
       </Routes>
     </BrowserRouter>
   );

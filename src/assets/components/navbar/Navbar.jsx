@@ -7,25 +7,42 @@ import Logo from "../../img/Logo.png";
 export const Navbar = () => {
   return (
     <>
-      <div className="bg-white w-full border-b shadow-sm py-4 fixed z-10">
-        <div className="max-w-7xl w-[90%] flex mx-auto justify-between items-center">
-          <div className="flex gap-2 items-center mr-auto">
-            <img src={Logo} alt="Logo" loading="lazy" className="w-6 object-contain" />
-            <p className="font-semibold text-base text-slate-600">SIMS PPOB</p>
+      <Link
+        to="/"
+        className="fixed z-10 w-full border-b bg-white py-4 shadow-sm"
+      >
+        <div className="mx-auto flex w-[90%] max-w-7xl items-center justify-between">
+          <div className="mr-auto flex items-center gap-2">
+            <img
+              src={Logo}
+              alt="Logo"
+              loading="lazy"
+              className="w-6 object-contain"
+            />
+            <p className="text-base font-semibold text-slate-600">SIMS PPOB</p>
           </div>
           <div className="flex gap-10">
-            <Link to={"/"} className="text-slate-700 text-base font-medium hover:text-orange-600">
+            <Link
+              to={"/top-up"}
+              className="text-base font-medium text-slate-700 hover:text-orange-600"
+            >
               Top Up
             </Link>
-            <Link to={"/"} className="text-slate-700 text-base font-medium hover:text-orange-600">
+            <Link
+              to={"/transaction"}
+              className="text-base font-medium text-slate-700 hover:text-orange-600"
+            >
               Transaction
             </Link>
-            <Link to={"/"} className="text-slate-700 text-base font-medium hover:text-orange-600">
+            <Link
+              to={"/profile"}
+              className="text-base font-medium text-slate-700 hover:text-orange-600"
+            >
               Akun
             </Link>
           </div>
         </div>
-      </div>
+      </Link>
     </>
   );
 };
