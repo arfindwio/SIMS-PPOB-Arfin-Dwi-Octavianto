@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // Images
 import Logo from "../assets/img/Logo.png";
@@ -28,14 +29,16 @@ export const Login = () => {
               <div className="pl-4 pr-8 w-full border rounded-md py-2 flex gap-2 items-center relative">
                 <CiLock size={20} id="username" className="text-slate-400" />
                 <input type="password" name="username" placeholder="masukkan password anda" className="outline-none w-full" />
-                <IoEyeOutline size={20} className="text-slate-400 absolute right-3" />
-                {/* <IoEyeOffOutline size={20} className="text-slate-400 absolute right-2" /> */}
+                <IoEyeOutline size={20} className="text-slate-400 absolute right-3 cursor-pointer" />
+                {/* <IoEyeOffOutline size={20} className="text-slate-400 absolute right-3 cursor-pointer" /> */}
               </div>
             </div>
             <button className="bg-orange-600 w-full text-white py-3 rounded-md hover:bg-red-600">Masuk</button>
             <div className="flex gap-1 items-center">
               <p className="text-sm text-slate-500">belum punya akun? registrasi</p>
-              <p className="text-orange-600 text-sm font-semibold">di sini</p>
+              <Link to={"/registration"} className="text-orange-600 text-sm font-semibold">
+                di sini
+              </Link>
             </div>
           </form>
         </div>
