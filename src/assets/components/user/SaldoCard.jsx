@@ -8,19 +8,19 @@ import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 
 export const SaldoCard = () => {
   return (
-    <div className="flex w-full justify-between">
-      <div className="flex w-[40%] flex-col">
+    <div className="flex w-full flex-col justify-between gap-4 md:flex-row md:gap-0">
+      <div className="flex w-full flex-col items-center justify-center md:w-[40%] md:items-start md:justify-start">
         <img
           src={ProfilePhoto}
           alt="Profile Photo"
           loading="lazy"
           className="h-1w-16 aspect-square w-16 rounded-full border object-cover"
         />
-        <p className="mt-4 text-base text-slate-500">Selamat datang,</p>
+        <p className="mt-2 text-base text-slate-500 md:mt-4">Selamat datang,</p>
         <h1 className="text-2xl font-bold text-black">Kristanto Wibowo</h1>
       </div>
       <div
-        className={`flex h-full w-[60%] flex-col gap-2 overflow-hidden rounded-md bg-[url('/src/assets/img/Background-Saldo.png')] bg-cover bg-center bg-no-repeat p-5`}
+        className={`flex h-full w-full flex-col gap-2 overflow-hidden rounded-md bg-[url('/src/assets/img/Background-Saldo.png')] bg-cover bg-center bg-no-repeat p-5 md:w-[60%]`}
       >
         <p className="text-base text-white">Saldo Anda</p>
         <div className="flex items-center gap-2 text-2xl font-bold text-white">
