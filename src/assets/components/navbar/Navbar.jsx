@@ -1,18 +1,33 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+
+// Components
+import { NavbarMobile } from "./NavbarMobile";
 
 // Images
 import Logo from "../../img/Logo.png";
 
+// Icons
+import { GiHamburgerMenu } from "react-icons/gi";
+
 export const Navbar = () => {
+  const [isMobileNavbarVisible, setMobileNavbarVisible] = useState(false);
+
+  const toggleMobileNavbar = () => {
+    setMobileNavbarVisible(!isMobileNavbarVisible);
+  };
+
+  useEffect(() => {
+    isMobileNavbarVisible
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "auto");
+  }, [isMobileNavbarVisible]);
+
   return (
     <>
-      <Link
-        to="/"
-        className="fixed z-10 w-full border-b bg-white py-4 shadow-sm"
-      >
+      <div className="fixed z-[1] w-full border-b bg-white py-4 shadow-sm">
         <div className="mx-auto flex w-[90%] max-w-7xl items-center justify-between">
-          <div className="mr-auto flex items-center gap-2">
+          <Link to="/" className="mr-auto flex items-center gap-2">
             <img
               src={Logo}
               alt="Logo"
@@ -20,8 +35,8 @@ export const Navbar = () => {
               className="w-6 object-contain"
             />
             <p className="text-base font-semibold text-slate-600">SIMS PPOB</p>
-          </div>
-          <div className="flex gap-10">
+          </Link>
+          <div className="hidden gap-10 sm:flex">
             <Link
               to={"/top-up"}
               className="text-base font-medium text-slate-700 hover:text-orange-600"
@@ -41,8 +56,17 @@ export const Navbar = () => {
               Akun
             </Link>
           </div>
+          <button
+            onClick={toggleMobileNavbar}
+            className="rounded-md p-2 hover:bg-slate-100 active:bg-slate-200 sm:hidden"
+          >
+            <GiHamburgerMenu size={16} className="text-slate-600" />
+          </button>
         </div>
-      </Link>
+      </div>
+      {isMobileNavbarVisible && (
+        <NavbarMobile closeNavbar={toggleMobileNavbar} />
+      )}
     </>
   );
 };

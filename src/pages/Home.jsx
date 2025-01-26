@@ -29,106 +29,128 @@ export const Home = () => {
       <Navbar />
 
       <div className="w-full bg-white">
-        <div className="mx-auto flex w-[90%] max-w-7xl flex-col gap-6 pb-10 pt-20">
+        <div className="mx-auto flex w-[90%] max-w-7xl flex-col gap-4 pb-10 pt-20 md:gap-6">
           <SaldoCard />
-          <div className="mt-6 flex w-full flex-wrap items-start justify-center">
-            <div className="flex w-1/12 flex-col items-center justify-center gap-2">
+          <div className="mt-2 flex w-full flex-wrap items-start justify-center gap-2 md:mt-6 lg:gap-0">
+            <div className="flex w-fit max-w-[70px] flex-col items-center justify-center gap-1 sm:gap-2 md:w-1/12 lg:max-w-none">
               <img
                 src={PBB}
                 alt="PBB Icon"
                 className="aspect-square w-fit object-contain"
               />
-              <p className="text-center text-sm text-slate-500">PBB</p>
+              <p className="text-center text-xs text-slate-500 sm:text-sm">
+                PBB
+              </p>
             </div>
-            <div className="flex w-1/12 flex-col items-center justify-center gap-2">
+            <div className="flex w-fit max-w-[70px] flex-col items-center justify-center gap-1 sm:gap-2 md:w-1/12 lg:max-w-none">
               <img
                 src={Listrik}
                 alt="Listrik Icon"
                 className="aspect-square w-fit object-contain"
               />
-              <p className="text-center text-sm text-slate-500">Listrik</p>
+              <p className="text-center text-xs text-slate-500 sm:text-sm">
+                Listrik
+              </p>
             </div>
-            <div className="flex w-1/12 flex-col items-center justify-center gap-2">
+            <div className="flex w-fit max-w-[70px] flex-col items-center justify-center gap-1 sm:gap-2 md:w-1/12 lg:max-w-none">
               <img
                 src={Pulsa}
                 alt="Pulsa Icon"
                 className="aspect-square w-fit object-contain"
               />
-              <p className="text-center text-sm text-slate-500">Pulsa</p>
+              <p className="text-center text-xs text-slate-500 sm:text-sm">
+                Pulsa
+              </p>
             </div>
-            <div className="flex w-1/12 flex-col items-center justify-center gap-2">
+            <div className="flex w-fit max-w-[70px] flex-col items-center justify-center gap-1 sm:gap-2 md:w-1/12 lg:max-w-none">
               <img
                 src={PDAM}
                 alt="PDAM Icon"
                 className="aspect-square w-fit object-contain"
               />
-              <p className="text-center text-sm text-slate-500">PDAM</p>
+              <p className="text-center text-xs text-slate-500 sm:text-sm">
+                PDAM
+              </p>
             </div>
-            <div className="flex w-1/12 flex-col items-center justify-center gap-2">
+            <div className="flex w-fit max-w-[70px] flex-col items-center justify-center gap-1 sm:gap-2 md:w-1/12 lg:max-w-none">
               <img
                 src={PGN}
                 alt="PGN Icon"
                 className="aspect-square w-fit object-contain"
               />
-              <p className="text-center text-sm text-slate-500">PGN</p>
+              <p className="text-center text-xs text-slate-500 sm:text-sm">
+                PGN
+              </p>
             </div>
-            <div className="flex w-1/12 flex-col items-center justify-center gap-2">
+            <div className="flex w-fit max-w-[70px] flex-col items-center justify-center gap-1 sm:gap-2 md:w-1/12 lg:max-w-none">
               <img
                 src={Televisi}
                 alt="Televisi Icon"
                 className="aspect-square w-fit object-contain"
               />
-              <p className="text-center text-sm text-slate-500">Televisi</p>
+              <p className="text-center text-xs text-slate-500 sm:text-sm">
+                Televisi
+              </p>
             </div>
-            <div className="flex w-1/12 flex-col items-center justify-center gap-2">
+            <div className="flex w-fit max-w-[70px] flex-col items-center justify-center gap-1 sm:gap-2 md:w-1/12 lg:max-w-none">
               <img
                 src={Musik}
                 alt="Musik Icon"
                 className="aspect-square w-fit object-contain"
               />
-              <p className="text-center text-sm text-slate-500">Musik</p>
+              <p className="text-center text-xs text-slate-500 sm:text-sm">
+                Musik
+              </p>
             </div>
-            <div className="flex w-1/12 flex-col items-center justify-center gap-2">
+            <div className="flex w-fit max-w-[70px] flex-col items-center justify-center gap-1 sm:gap-2 md:w-1/12 lg:max-w-none">
               <img
                 src={Game}
                 alt="Game Icon"
                 className="aspect-square w-fit object-contain"
               />
-              <p className="text-center text-sm text-slate-500">Game</p>
+              <p className="text-center text-xs text-slate-500 sm:text-sm">
+                Game
+              </p>
             </div>
-            <div className="flex w-1/12 flex-col items-center justify-center gap-2">
+            <div className="flex w-fit max-w-[70px] flex-col items-center justify-center gap-1 sm:gap-2 md:w-1/12 lg:max-w-none">
               <img
                 src={VoucherMakanan}
                 alt="Voucher Makanan Icon"
                 className="aspect-square w-fit object-contain"
               />
-              <p className="text-center text-sm text-slate-500">
+              <p className="text-center text-xs text-slate-500 sm:text-sm">
                 Voucher Makanan
               </p>
             </div>
-            <div className="flex w-1/12 flex-col items-center justify-center gap-2">
+            <div className="flex w-fit max-w-[70px] flex-col items-center justify-center gap-1 sm:gap-2 md:w-1/12 lg:max-w-none">
               <img
                 src={Kurban}
                 alt="Kurban Icon"
                 className="aspect-square w-fit object-contain"
               />
-              <p className="text-center text-sm text-slate-500">Kurban</p>
+              <p className="text-center text-xs text-slate-500 sm:text-sm">
+                Kurban
+              </p>
             </div>
-            <div className="flex w-1/12 flex-col items-center justify-center gap-2">
+            <div className="flex w-fit max-w-[70px] flex-col items-center justify-center gap-1 sm:gap-2 md:w-1/12 lg:max-w-none">
               <img
                 src={Zakat}
                 alt="Zakat Icon"
                 className="aspect-square w-fit object-contain"
               />
-              <p className="text-center text-sm text-slate-500">Zakat</p>
+              <p className="text-center text-xs text-slate-500 sm:text-sm">
+                Zakat
+              </p>
             </div>
-            <div className="flex w-1/12 flex-col items-center justify-center gap-2">
+            <div className="flex w-fit max-w-[70px] flex-col items-center justify-center gap-1 sm:gap-2 md:w-1/12 lg:max-w-none">
               <img
                 src={PaketData}
                 alt="Paket Data Icon"
                 className="aspect-square w-fit object-contain"
               />
-              <p className="text-center text-sm text-slate-500">Paket Data</p>
+              <p className="text-center text-xs text-slate-500 sm:text-sm">
+                Paket Data
+              </p>
             </div>
           </div>
           <div className="my-6 flex w-full flex-col">

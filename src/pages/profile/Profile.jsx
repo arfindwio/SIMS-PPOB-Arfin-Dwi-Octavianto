@@ -17,7 +17,7 @@ export const Profile = () => {
       <Navbar />
 
       <div className="w-full bg-white">
-        <form className="mx-auto flex w-[60%] max-w-7xl flex-col items-center justify-center gap-6 pb-10 pt-20">
+        <form className="mx-auto flex w-[80%] max-w-7xl flex-col items-center justify-center gap-4 pb-10 pt-20 md:w-[60%] md:gap-6 lg:w-[55%]">
           <div className="h-3w-36 relative mx-auto w-36">
             <img
               src={ProfilePhoto}
@@ -29,9 +29,14 @@ export const Profile = () => {
               <FaPen size={15} className="text-black" />
             </div>
           </div>
-          <h1 className="text-center text-3xl font-bold">Kristanto Wibowo</h1>
-          <div className="flex w-full flex-col gap-2">
-            <label htmlFor="email" className="text-base font-medium text-black">
+          <h1 className="text-center text-2xl font-bold sm:text-3xl">
+            Kristanto Wibowo
+          </h1>
+          <div className="flex w-full flex-col gap-1 md:gap-2">
+            <label
+              htmlFor="email"
+              className="text-sm font-medium text-black sm:text-base"
+            >
               Email
             </label>
             <div className="flex w-full items-center gap-2 rounded-md border py-3 pl-4">
@@ -45,10 +50,10 @@ export const Profile = () => {
               />
             </div>
           </div>
-          <div className="flex w-full flex-col gap-2">
+          <div className="flex w-full flex-col gap-1 md:gap-2">
             <label
               htmlFor="firstName"
-              className="text-base font-medium text-black"
+              className="text-sm font-medium text-black sm:text-base"
             >
               Nama Depan
             </label>
@@ -63,10 +68,10 @@ export const Profile = () => {
               />
             </div>
           </div>
-          <div className="flex w-full flex-col gap-2">
+          <div className="flex w-full flex-col gap-1 md:gap-2">
             <label
               htmlFor="lastName"
-              className="text-base font-medium text-black"
+              className="text-sm font-medium text-black sm:text-base"
             >
               Nama Belakang
             </label>
@@ -81,12 +86,14 @@ export const Profile = () => {
               />
             </div>
           </div>
-          <button className="w-full rounded-md border-2 border-white bg-orange-600 py-3 text-white hover:bg-red-600">
-            Edit Profil
-          </button>
-          <button className="w-full rounded-md border-2 border-orange-600 bg-white py-3 text-orange-600 hover:bg-orange-600 hover:text-white">
-            Logout
-          </button>
+          <div className="flex w-full flex-col gap-2">
+            <button className="w-full rounded-md border-2 border-white bg-orange-600 py-3 text-sm text-white hover:bg-red-600 sm:text-base">
+              Edit Profil
+            </button>
+            <button className="w-full rounded-md border-2 border-orange-600 bg-white py-3 text-sm text-orange-600 hover:bg-orange-600 hover:text-white sm:text-base">
+              Logout
+            </button>
+          </div>
         </form>
       </div>
     </>

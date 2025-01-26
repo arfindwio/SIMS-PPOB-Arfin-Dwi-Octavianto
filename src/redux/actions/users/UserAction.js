@@ -1,5 +1,9 @@
 import { reduxGetAllUsers } from "../../../services/users/UsersServices";
-import { setRegister, startLoading, endLoading } from "../../reducer/users/UsersSlice";
+import {
+  setRegister,
+  startLoading,
+  endLoading,
+} from "../../reducer/users/UsersSlice";
 import { resetEnrollment } from "../../reducer/enrollments/EnrollmentsSlice";
 import { CookiesKeys, CookieStorage } from "../../../utils/cookie";
 
