@@ -8,6 +8,7 @@ import { Registration } from "../pages/auth/Registration";
 import { Profile } from "../pages/profile/Profile";
 import { Transaction } from "../pages/transaction/Transaction";
 import { TopUp } from "../pages/topup/TopUp";
+import { History } from "../pages/transaction/History";
 
 export const RouteList = () => {
   return (
@@ -24,6 +25,7 @@ export const RouteList = () => {
 
         {/* Transaction */}
         <Route path="/transaction" element={<Transaction />} />
+        <Route path="/history" element={<History />} />
 
         {/* Topup */}
         <Route path="/top-up" element={<TopUp />} />
