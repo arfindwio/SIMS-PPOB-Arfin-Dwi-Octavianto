@@ -29,7 +29,7 @@ export const Navbar = () => {
               Top Up
             </Link>
             <Link
-              to={"/transaction"}
+              to={"/history"}
               className="text-base font-medium text-slate-700 hover:text-orange-600"
             >
               Transaction
