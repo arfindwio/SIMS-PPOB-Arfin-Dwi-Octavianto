@@ -1,5 +1,8 @@
-import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useDispatch } from "react-redux";
+
+// Redux Action
+import { getHistoryTransactionAction } from "../../../redux/actions/transaction/TransactionAction";
 
 // Images
 import Logo from "../../img/Logo.png";
@@ -9,6 +12,7 @@ import { IoClose } from "react-icons/io5";
 
 export const NavbarMobile = ({ closeNavbar }) => {
   const location = useLocation();
+  const dispatch = useDispatch();
 
   return (
     <div className="fixed left-0 top-0 z-[2] flex h-screen w-full flex-col bg-white">
@@ -39,6 +43,9 @@ export const NavbarMobile = ({ closeNavbar }) => {
         <Link
           to={"/history"}
           className={`${location.pathname === "/history" ? "text-orange-600" : "text-slate-700"} w-fit text-lg font-medium hover:text-orange-600`}
+          onClick={() =>
+            dispatch(getHistoryTransactionAction("?offset=0&limit=5"))
+          }
         >
           Transaction
         </Link>
