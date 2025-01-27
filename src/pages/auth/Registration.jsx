@@ -160,7 +160,7 @@ export const Registration = () => {
         <div className="m-auto w-full md:w-1/2">
           <form
             onSubmit={handleSubmit}
-            className="mx-auto flex w-[80%] flex-col items-center justify-center gap-3 sm:w-[70%] md:w-[65%] md:gap-4 xl:gap-6"
+            className="mx-auto flex w-[80%] flex-col items-center justify-center gap-3 sm:w-[70%] md:w-[65%] md:gap-4"
           >
             <div className="mx-auto flex items-center gap-2">
               <img
@@ -176,7 +176,7 @@ export const Registration = () => {
             <h1 className="w-full text-center text-2xl font-bold text-black lg:w-3/4 xl:w-2/3 xl:text-3xl">
               Lengkapi data untuk membuat akun
             </h1>
-            <div className="flex w-full flex-col gap-3 py-3 lg:gap-5">
+            <div className="flex w-full flex-col gap-3 py-3">
               <div className="flex flex-col gap-1">
                 <div className="relative">
                   <MdAlternateEmail
