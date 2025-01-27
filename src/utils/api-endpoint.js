@@ -17,5 +17,5 @@ export const API_ENDPOINT = {
   GET_BALANCE: "/balance", // [GET] GET Balance
   POST_TOPUP: "/topup", // [POST] POST Topup
   POST_TRANSACTION: "/transaction", // [POST] POST Transaction
-  POST_HISTORY_TRANSACTION: "/transaction/history", // [GET] GET History Transaction
+  GET_HISTORY_TRANSACTION: "/transaction/history", // [GET] GET History Transaction
 };

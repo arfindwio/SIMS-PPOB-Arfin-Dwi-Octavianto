@@ -1,16 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  register: [],
+  token: null,
   loading: false,
 };
 
-const usersSlice = createSlice({
-  name: "users",
+const authSlice = createSlice({
+  name: "auth",
   initialState,
   reducers: {
-    setRegister: (state, action) => {
-      state.register = action.payload;
+    setToken: (state, action) => {
+      state.token = action.payload;
     },
     startLoading: (state) => {
       state.loading = true;
@@ -21,6 +21,6 @@ const usersSlice = createSlice({
   },
 });
 
-export const { setRegister, startLoading, endLoading } = usersSlice.actions;
+export const { setToken, startLoading, endLoading } = authSlice.actions;
 
-export default usersSlice.reducer;
+export default authSlice.reducer;

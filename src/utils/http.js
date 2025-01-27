@@ -2,7 +2,7 @@ import axios from "axios";
 import { CookieStorage, CookiesKeys } from "./cookie";
 
 const http = axios.create({
-  baseURL: process.env.REACT_APP_SERVER,
+  baseURL: import.meta.env.VITE_API_URL,
   timeout: 30000,
   headers: {
     Accept: "application/json",

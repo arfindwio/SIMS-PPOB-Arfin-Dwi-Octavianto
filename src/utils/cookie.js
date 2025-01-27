@@ -9,6 +9,7 @@ export const CookiesKeys = {
 const CookieOptions = {
   path: "/",
   secure: true,
+  expires: new Date(new Date().getTime() + 12 * 60 * 60 * 1000),
 };
 
 export const CookieStorage = {
