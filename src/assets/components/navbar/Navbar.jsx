@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useDispatch } from "react-redux";
+
+// Redux Action
+import { getHistoryTransactionAction } from "../../../redux/actions/transaction/TransactionAction";
 
 // Components
 import { NavbarMobile } from "./NavbarMobile";
@@ -11,6 +15,9 @@ import Logo from "../../img/Logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 export const Navbar = () => {
+  const location = useLocation();
+  const dispatch = useDispatch();
+
   const [isMobileNavbarVisible, setMobileNavbarVisible] = useState(false);
 
   const toggleMobileNavbar = () => {
@@ -39,19 +46,22 @@ export const Navbar = () => {
           <div className="hidden gap-10 sm:flex">
             <Link
               to={"/top-up"}
-              className="text-base font-medium text-slate-700 hover:text-orange-600"
+              className={`${location.pathname === "/top-up" ? "text-orange-600" : "text-slate-700"} text-base font-medium hover:text-orange-600`}
             >
               Top Up
             </Link>
             <Link
               to={"/history"}
-              className="text-base font-medium text-slate-700 hover:text-orange-600"
+              className={`${location.pathname === "/history" ? "text-orange-600" : "text-slate-700"} text-base font-medium hover:text-orange-600`}
+              onClick={() =>
+                dispatch(getHistoryTransactionAction("?offset=0&limit=5"))
+              }
             >
               Transaction
             </Link>
             <Link
               to={"/profile"}
-              className="text-base font-medium text-slate-700 hover:text-orange-600"
+              className={`${location.pathname === "/profile" ? "text-orange-600" : "text-slate-700"} text-base font-medium hover:text-orange-600`}
             >
               Akun
             </Link>
